@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@500&family=Ubuntu:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <div class="header__top-info">
+                        <a class="header__logo" href="#">
+                            <img class="header__logo-img" src="./img/logo.png" alt="logo">
+                        </a>
+
+                        <div class="header__top-content">
+                            <a class="header__email" href="mailto:info@s355.ru">info@s355.ru</a>
+
+                            <ul class="header__top-list">
+                                <li class="header__top-item" value="">
+                                    <a class="header__top-tell" href="tell:74952411757">+7 (495) 241-17-57</a>
+                                </li>
+                            </ul>
+
+                            <button class="header__top-btn">Быстрый заказ</button>
+                        </div>
+                    </div>
+
+                    <div class="header__top-nav">
+                        <div class="header__burger-wrap">
+                            <button class="header__burger">
+                                <img class="header__burger-img" src="./img/burger.svg" alt="icon meny burger">
+                            </button>
+                            <a class="header__burger-name" href="#">Каталог продукции</a>
+                        </div>
+
+                        <nav class="header__nav">
+                            <button class="header__close">
+                                <img class="header__close-icon" src="./img/icon-close.svg" alt="button close">
+                            </button>
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">О компании</a>
+                                </li>
+
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">База знаний</a>
+                                </li>
+
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">Новости</a>
+                                </li>
+
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">Доставка</a>
+                                </li>
+
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">For suppliers</a>
+                                </li>
+
+                                <li class="header__nav-item">
+                                    <a class="header__nav-link" href="#">Контакты</a>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                        <button class="header__top-basket header__top-basket--active">
+                            <img class="header__top-basket-img" src="./img/buy.png" alt="icon basket">
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__catalog-conntent">
+            <div class="container">
+                <div class="header__catalog-inner">
+                    <h2 class="header__catalog-title">Балка двутавровая </h2>
+
+                    <nav class="header__breadCrumbs">
+                        <ul class="header__breadCrumbs-list">
+                            <li class="header__breadCrumbs-item">
+                                <a class="header__breadCrumbs-link" href="./index.html">Главная</a>
+                            </li>
+
+                            <li class="header__breadCrumbs-item">
+                                <a class="header__breadCrumbs-link" href="#">Каталог продукции</a>
+                            </li>
+
+                            <li class="header__breadCrumbs-item">
+                                <a class="header__breadCrumbs-link" href="#">Балка двутавровая</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__inner">
+                <div class="catalog__top">
+                    <button class="catalog__top-btn">Подобрать продукцию по параметрам</button>
+
+                    <div class="catalog__top-info">
+                        <span class="catalog__top-title">
+                            Подобрано товаров:
+                            <span class="catalog__current-product">117   из</span>
+
+                            <span class="catalog__all-product">399</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="catalog__content">
+                    
+                    <table class="table">
+                        <caption class="table__name table__balk-name">Балка двутавровая </caption>
+                        <thead class="table__header">
+                            <tr class="table__header-row">
+                                <th class="table__header-cell">Наименование</th>
+                                <th class="table__header-cell">Марка стали</th>
+                                <th class="table__header-cell">Стандарт</th>
+                                <th class="table__header-cell">Производитель</th>
+                                <th class="table__header-cell">Наличие</th>
+                                <th class="table__header-cell">Цена</th>
+                                <th class="table__header-cell"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table__body">
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка HE 400x299</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка IPE AA 80</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S235JR / 1.0038</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка HD 260х54,1</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S275J0 / 1.0143</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">EN 10025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка HEB 100 (IPB)</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S355ML / 1.8834</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025-2</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка IPN 80 (INP)</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S355J2 / 1.0577</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025-1</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка IPE v 400</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S235JR / 1.0038</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка HE 400x299</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+
+                            <tr class="table__body-row">
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-name">Балка IPE AA 80</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <select class="table__balk-select" >
+                                        <option value="S355G4+M / 1.8803+M">S235JR / 1.0038</option>
+                                        <option value="S355G4+M / 1.8803+M">S355G4+M / 1.8803+M</option>
+                                    </select>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">DIN 1025</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Европа</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">Под заказ</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <span class="table__balk-text">По запросу</span>
+                                </th>
+
+                                <th class="table__body-cell">
+                                    <button class="table__btn-order">Быстрый заказ</button>
+                                    <button class="table__btn-application">Заявка</button>
+                                </th>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="quick-order">
+        <div class="quick-order__inner">
+            <button class="quick-order__close">
+                <img class="quick-orderr__close-icon" src="./img/icon-close.svg" alt="button close">
+            </button>
+
+            <h2 class="quick-order__title">Быстрый заказ</h2>
+            <div class="quick-order__counter">
+                <span class="quick-order__subtitle">Балка HE 400x299 (S235JR / 1.0038)</span>
+                <div class="quick-order__wrap">
+                    <div class="quick-order__wrap-input">
+                        <button class="quick-order__btn-del" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
+                        <input class="quick-order__value" type="number" placeholder="Кол-во" min="1" max="100" required>
+                        <button class="quick-order__btn-add" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
+                    </div>
+
+                    <div class="quick-order__wrap-input">
+                        <button class="quick-order__btn-del" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
+                        <input class="quick-order__value" type="number" placeholder="м =" min="1" max="100" required>
+                        <button class="quick-order__btn-add" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
+                    </div>
+                </div>
+            </div>
+
+            <form class="quick-order__form">
+                <input class="quick-order__input" placeholder="Ваше имя" type="text" required>
+                <input class="quick-order__input" placeholder="Номер телефона" type="tel" required>
+                <input class="quick-order__input" placeholder="E-mail" type="email" required>
+
+                <textarea class="quick-order__input" placeholder="Комментарий к заказу"></textarea>
+
+                <button class="quick-order__btn-file">Прикрепить файл</button>
+                <button class="quick-order__btn-send">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/style.js"></script>
+</body>
+
+</html>

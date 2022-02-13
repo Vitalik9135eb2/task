@@ -1,0 +1,256 @@
+.footer{
+    margin-top: 100px;
+    @media (max-width: 1599.98px){
+        margin-top: 70px;
+    }
+    @media (max-width: 1399.98px){
+        margin-top: 50px;
+    }
+    @media (max-width: 991.98px){
+        margin-top: 30px;
+    }
+
+    &__top{
+        background-color: $bgColor;
+        padding: 60px 0;
+        @media (max-width: 991.98px){
+            padding: 30px 0;
+        }
+    }
+    &__inner{
+        @include flex(flex,row,space-between,flex-start);
+        @media (max-width: 768.98px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__card-wrap.active{
+        height: 100%;
+    }
+    &__card-wrap{
+        margin-right: 10px;
+        
+        @media (max-width: 768.98px){
+            margin: 15px;
+            height: 30px;
+            overflow: hidden;
+            padding: 0 40px;
+            text-align: left;        
+        }
+        
+        &:nth-child(3){
+            .footer__card-title:after{
+                right: -30px;
+            }
+        }
+        &:last-child{
+            margin-right: 0;
+            @media (max-width: 768.98px){
+                margin: 15px;        
+            }
+
+            .footer__card-title:after{
+                right: 120px;
+            }
+        }
+    }
+    &__card-title{
+        @include text(20px,700,24px,$accentColor);
+        margin-bottom: 25px;
+        position: relative;
+        &::after{
+            display: none;
+            position: absolute;
+            content: " ";
+            background-image: url('./../img/arrow-input.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotate(180deg);
+            width: 15px;
+            height: 6px;
+            top: 6px;
+            right: 55px;
+            @media (max-width: 768.98px){
+                display: block;
+            }
+        }
+        &:nth-child(5)::after{
+            right: -20px;
+        }
+
+        @media (max-width: 1199.98px){
+            font-size: 18px;
+            line-height: inherit;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768.98px){
+            cursor: pointer;
+        }
+
+    }
+    
+
+
+    &__contact-item{
+        margin-bottom: 30px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: " ";
+            background-image: url('./../img/footer__tell__icon.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 16px;
+            height: 16px;
+            top: 8px;
+            left: -30px;
+        }
+        &:nth-child(2)::before{
+            background-image: url('./../img/footer__map-icon.png');
+        }
+        @media (max-width: 1199.98px){
+            margin-bottom: 15px;
+        }
+    }
+    &__contact-tell{
+        display: block;
+        @include text(19px,700,30.4px,$accentColor);
+        @media (max-width: 1199.98px){
+            font-size: 16px;
+            line-height: inherit;
+        }
+        @media (max-width: 991.98px){
+            font-size: 14px;
+        }
+    }
+    &__contact-mail{
+        display: block;
+        @include text(14px,400,22.4px,$textColor);
+        @media (max-width: 991.98px){
+            font-size: 12px;
+        }
+    }
+
+    &__contact-adress{
+        display: block;
+        @include text(14px,400,22.4px,$textColor);
+        max-width: 237px;
+        @media (max-width: 1199.98px){
+            font-size: 12px;
+            line-height: 16px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+
+
+
+    &__catalogs-wrap{
+        display: flex;
+    }
+    &__catalogs{
+        @include flex(flex,column,space-between,flex-start);
+        max-width: 330px;
+        margin-right: 64px;
+        &:last-child{
+            margin-right: 0;
+        }
+        @media (max-width: 1499.98px){
+            margin-right: 15px;
+        }
+    }
+    &__catalogs-item{
+    
+    }
+    &__card-link{
+        display: block;
+        @include text(14px,400,36.4px,$textColor);
+        transition: .3s;
+        &:hover{
+            color:$accentColor;
+        }
+        @media (max-width: 1199.98px){
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+
+
+
+
+
+    &__call-info{
+        display: block;
+        @include text(14px,400,22.4px,$textColor);
+        max-width: 260px;
+        @media (max-width: 1199.98px){
+            font-size: 12px;
+            line-height: 22px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 10px;
+            line-height: 18px;
+        }
+    }
+    &__call{
+        display: flex;
+        margin-top: 40px;
+        @media (max-width: 1199.98px){
+            margin-top: 20px;
+        }
+    }
+    &__call-input{
+        border: 1px solid #D8D8D8;
+        padding: 10px 15px;
+        &::placeholder{
+            @include text(13px,400,26px,$textColor);
+            @media (max-width: 991.98px){
+                font-size: 10px;
+            }
+        }
+        @media (max-width: 1199.98px){
+            max-width: 180px;
+        }
+        @media (max-width: 991.98px){
+            max-width: 130px;
+            padding: 8px;
+        }
+    }
+    &__call-send{
+        @include text(13px,700,26px,$accentColor);
+        padding: 10px 15px;
+        border: 1px solid #D8D8D8;
+        @media (max-width: 1199.98px){
+            font-size: 12px;
+            line-height: inherit;
+            padding: 8px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 10px;
+        }
+    }
+
+
+    &__bottom{
+        height: 61px;
+        @include flex(flex,row,center,center);
+        @media (max-width: 768.98px){
+            height: 40px;
+        }
+    }
+    &__bottom-text{
+        @include text(14px,400,16.09px,$textColor);
+        display: block;
+        @media (max-width: 768.98px){
+            font-size: 10px;        
+        }
+    }
+
+
+}

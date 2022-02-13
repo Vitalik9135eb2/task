@@ -1,0 +1,142 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+button{background-color: #fff;}
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+/*--------------------*/
+
+@import './assets/mixins.scss';
+@import './assets/vars.scss';
+
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 150px;
+    @media (max-width: 1499.98px) { 
+        padding: 0 110px;
+    }
+    @media (max-width: 1199.98px){
+        padding: 0 70px;
+    }
+    @media (max-width: 991.98px){
+        padding: 0 40px;
+    }
+    @media (max-width: 767.98px){
+        padding: 0 25px;
+    }
+    @media (max-width: 576.98px){
+        padding: 0 10px;
+    }
+    
+}
+
+.text__color--blue{
+    color: $textColorHover;
+    font-weight: 700;
+}
+
+.title__wrap{
+    width: 100%;
+    @include flex(flex,row,space-between,center);
+    padding-bottom: 40px;
+    border-bottom: 2px solid $accentColor;
+    @media (max-width: 1399.98px){
+        padding-bottom: 30px;
+    }
+    @media (max-width: 991.98px){
+        padding-bottom: 15px;
+    }
+}
+
+.title{
+    @include text(36px,700,42.3px,$accentColor);
+    @media (max-width: 1199.98px){
+        font-size: 32px;
+        line-height: inherit;
+    }
+    @media (max-width: 991.98px){
+        font-size: 26px;
+    }
+    @media (max-width: 567.98px){
+        font-size: 16px;
+    }
+}
+.title__btn{
+    @include text(22px,400,26px,$textColorHover);
+    padding-right: 55px;
+    position: relative;
+    @media (max-width: 991.98px){
+        font-size: 16px;
+        line-height: inherit;
+        padding-right: 45px;
+    }
+    @media (max-width: 567.98px){
+        font-size: 12px;
+    }
+    &:after{
+        position: absolute;
+        content: " ";
+        background-image: url('./../img/title-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 45px;
+        height: 8px;
+        top: 35%;
+        right: 0;
+        @media (max-width: 991.98px){
+            width: 38px;
+            height: 7px;
+        }
+        @media (max-width: 567.98px){
+            width: 20px;
+            height: 3px;
+            top: 35%;
+            right: 15%;
+        }
+    }
+}
+
+@import './_header.scss';
+@import './_projects.scss';
+@import './_about.scss';
+@import './_news.scss';
+@import './_brands.scss';
+@import './_footer.scss';
+
+
+@import './_quick-order';
+
+
+
+@import './_header-catalog.scss';
+@import './_catalog.scss';

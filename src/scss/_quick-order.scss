@@ -1,0 +1,222 @@
+.quick-order.active{
+    display: flex !important;
+}
+
+.quick-order {
+    display: none !important;
+    position: absolute;
+    @include flex(flex, row, center, center);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    background-color: #00111d93;
+
+    &__inner {
+        padding: 40px 0;
+        background-color: #fff;
+        @include flex(flex, column, center, center);
+        position: relative;
+        border-radius: 5px;
+    }
+
+    &__close {
+        position: absolute;
+        background-color: transparent;
+        right: -32px;
+        top: 0;
+    }
+
+    &__title {
+        @include text(24px, 700, 26px, $accentColor);
+        margin-bottom: 20px;
+    }
+
+    &__counter {
+        background-color: $bgColor;
+        padding: 15px 50px;
+        @media (max-width: 567.98px){
+            padding: 15px;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        max-width: 260px;
+        text-align: center;
+        @include text(16px, 400, 24px, $accentColor);
+        @media (max-width: 567.98px){
+            font-size: 14px;
+            max-width: 210px;
+        }
+    }
+
+    &__wrap {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__value {
+        border: 1px solid #EAEEF0;
+        width: 115px;
+        height: 50px;
+        padding: 0 15px;
+        appearance: none;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            border-color: $textColor;
+        }
+        @media (max-width: 567.98px){
+            width: 100px;
+        }
+    }
+
+    &__wrap-input {
+        &:last-child .quick-order__btn-del {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('./../img/arrow-input.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: rotate(180deg);
+                width: 10px;
+                height: 6px;
+                top: 0px;
+                right: -108px;
+                @media (max-width: 567.98px){
+                    right: -93px;
+                }
+            }
+        }
+        &:last-child .quick-order__btn-add {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('./../img/arrow-input.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 10px;
+                height: 6px;
+                top: -15px;
+                right: 15px;
+            }
+        }
+
+    }
+
+    &__btn-add {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('./../img/arrow-input.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 10px;
+            height: 6px;
+            top: -15px;
+            right: 12px;
+        }
+    }
+
+    &__btn-del {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('./../img/arrow-input.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotate(180deg);
+            width: 10px;
+            height: 6px;
+            top: 0px;
+            right: -110px;
+            @media (max-width: 567.98px){
+                right: -96px;
+            }
+        }
+    }
+
+    &__form {
+        @include flex(flex, column, center, center);
+    }
+
+    &__input {
+        width: 260px;
+        height: 50px;
+        border: 1px solid #EAEEF0;
+        border-radius: 3px;
+        margin-top: 15px;
+        padding-left: 15px;
+        cursor: pointer;
+        transition: .3s;
+        @media (max-width: 567.98px){
+            width: 200px;
+        }
+        &:hover{
+            border-color: $textColor;
+        }
+        &:nth-child(4){
+            resize: none;
+            padding:15px;
+        }
+    }
+
+    &__btn-file {
+        position: relative;
+        margin-top: 15px;
+        border: 1px dashed #EAEEF0;
+        padding: 10px 60px 12px 87px;
+        @include text(13px,500,26px,$textColorHover);
+        transition: .3s;
+        border-radius: 3px;
+        &:hover{
+            background-color: $bgColor;
+            border-color: $textColor;
+        }
+        &::before{
+            position: absolute;
+            content: " ";
+            background-image: url('./../img/attach.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            top: 13px;
+            left: 50px;
+            @media (max-width: 567.98px){
+                left: 25px;
+            }
+        }
+
+        @media (max-width: 567.98px){
+            padding: 10px 23px 10px 55px;
+        }
+    }
+
+    &__btn-send {
+        margin-top: 20px;
+        @include text(13px,500,26px,$textColorLight);
+        background-color: $accentColor;
+        padding: 10px 75px 10px 75px;
+        transition: .3s;
+        border-radius: 3px;
+        &:hover{
+            background-color: darken($accentColor, 5%);
+        }
+        @media (max-width: 567.98px){
+            padding: 10px 40px;
+        }
+    }
+}

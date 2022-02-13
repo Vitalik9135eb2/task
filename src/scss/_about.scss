@@ -1,0 +1,155 @@
+.about{
+    margin-top: 100px;
+    width: 100%;
+    background-image: url('./../img/bg__about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 1599.98px){
+        margin-top: 70px;
+    }
+    @media (max-width: 1399.98px){
+        margin-top: 50px;
+    }
+    @media (max-width: 991.98px){
+        margin-top: 10px;
+    }
+
+    &__inner{
+        padding: 100px 0;
+        @media (max-width: 1199.98px){
+            padding: 70px 0;
+        }
+        @media (max-width: 991.98px){
+            padding: 50px 0;
+        }
+    }
+
+    &__title{
+        width: 100%;
+        @include text(36px,700,43.5px,$textColorLight);
+        padding-bottom: 40px;
+        border-bottom: 2px solid #fff;
+        @media (max-width: 1399.98px){
+            padding-bottom: 30px;
+        }
+        @media (max-width: 1199.98px){
+            font-size: 32px;
+            line-height: inherit;
+        }
+        @media (max-width: 991.98px){
+            font-size: 26px;
+            padding-bottom: 15px;
+        }
+        @media (max-width: 567.98px){
+            font-size: 16px;
+        }
+    }
+
+    &__text-wrap{
+        margin-top: 45px;
+        @include flex(flex,row,space-between,flex-start);
+        position: relative;
+        @media (max-width: 768.98px){
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        &::before{
+            position: absolute;
+            content: " ";
+            background-image: url('./../img/before__about.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 90px;
+            height: 90px;
+            top: -31%;
+            left: -5%;
+            @media (max-width: 1199.98px){
+                width: 70px;
+                height: 66px;
+                top: -44%;
+                left: -4%;
+            }
+        }
+    }
+    &__text-accent{
+        @include text(30px,400,36px,$textColorLight);
+        max-width: 457px;
+        @media (max-width: 1199.98px){
+            font-size: 22px;
+            line-height: 30px;
+            max-width: 390px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @media (max-width: 768.98px){
+            text-align: center;
+        }
+    }
+
+    &__text-secondary{
+        @include text(18px,400,27px,$textColorLight);
+        max-width: 555px;
+        @media (max-width: 1199.98px){
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 470px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 14px;
+            line-height: 20px;
+            max-width: 370px;
+        }
+        @media (max-width: 768.98px){
+            text-align: center;
+            margin-top: 20px;
+            max-width: 390px;
+        }
+    }
+
+    &__dignity{
+        @include flex(flex,row,space-between,flex-start);
+        margin-top: 40px;
+        @media (max-width: 1199.98px){
+            margin-top: 30px;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
+    }
+
+    &__dignity-item{
+        @media (max-width: 768.98px){
+            margin: 10px;
+        }
+
+    }
+    &__dignity-number{
+        display: block;
+        @include text(64px,500,76.8px,$textColorLight);
+        @media (max-width: 1199.98px){
+            font-size: 45px;
+            line-height: inherit;
+        }
+        @media (max-width: 991.98px){
+            font-size: 30px;
+        }
+    }
+    &__dignity-title{
+        margin-top: 25px;
+        display: block;
+        @include text(14px,400,21px,$textColor);
+        @media (max-width: 1199.98px){
+            margin-top: 15px;
+        }
+        @media (max-width: 991.98px){
+            font-size: 12px;
+        }
+        @media (max-width: 576.98px){
+            max-width: 90px;
+        }
+    }
+}
+
